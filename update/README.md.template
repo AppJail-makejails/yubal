@@ -6,7 +6,7 @@ Playlist sync. Artist/year sorting. Duplicate detection. Media server ready.
 
 github.com/guillevc/yubal
 
-<img src="https://github.com/guillevc/yubal/blob/master/web/public/favicon.svg?raw=true" width="80%" height="auto" alt="yubal">
+<img src="https://github.com/guillevc/yubal/blob/master/web/public/favicon.svg?raw=true" width="30%" height="auto" alt="yubal">
 
 ## How to use this Makejail
 
