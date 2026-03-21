@@ -63,7 +63,7 @@ volumes:
 
 ### Arguments
 
-* `yubal_from` (default: `ghcr.io/appjail-makejails/puck`): Location of OCI image. See also [OCI Configuration](#oci-configuration).
+* `yubal_from` (default: `ghcr.io/appjail-makejails/yubal`): Location of OCI image. See also [OCI Configuration](#oci-configuration).
 * `yubal_tag` (default: `latest`): OCI image tag. See also [OCI Configuration](#oci-configuration).
 
 ## OCI Configuration
