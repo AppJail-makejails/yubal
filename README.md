@@ -80,3 +80,7 @@ build:
         PYTHON_VERSION: "312"
         YUBAL_VERSION: "0.7.1"
 ```
+
+## Notes
+
+1. This Makejail includes [gh+AppJail-makejails/user-mapping](https://github.com/AppJail-makejails/user-mapping). 
