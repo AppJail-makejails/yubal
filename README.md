@@ -18,6 +18,7 @@ appjail makejail \
     -f gh+AppJail-makejails/yubal \
     -o virtualnet=":<random> default" \
     -o nat
+appjail start yubal
 ```
 
 ### Deploy using appjail-director
