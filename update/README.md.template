@@ -17,7 +17,8 @@ appjail makejail \
     -j yubal \
     -f gh+AppJail-makejails/yubal \
     -o virtualnet=":<random> default" \
-    -o nat
+    -o nat \
+    -o container="args:--pull"
 appjail start yubal
 ```
 
@@ -48,6 +49,7 @@ services:
         - YUBAL_TZ: America/Caracas
     options:
       - expose: '8000:8000'
+      - container: 'args:--pull'
     volumes:
       - data: /app/data
       - config: /app/config
