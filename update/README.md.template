@@ -51,23 +51,27 @@ services:
       - expose: '8000:8000'
       - container: 'args:--pull'
     volumes:
-      - data: /app/data
-      - config: /app/config
+      - data: yubal-data
+      - config: yubal-config
+default_volume_type: '<volumefs>'
 volumes:
   data:
     device: /var/appjail-volumes/yubal/data
-    owner: 1000
-    group: 1000
   config:
     device: /var/appjail-volumes/yubal/config
-    owner: 1000
-    group: 1000
 ```
 
 ### Arguments
 
 * `yubal_from` (default: `ghcr.io/appjail-makejails/%%IMAGE_NAME%%`): Location of OCI image. See also [OCI Configuration](#oci-configuration).
 * `yubal_tag` (default: `latest`): OCI image tag. See also [OCI Configuration](#oci-configuration).
+
+### Volumes
+
+| Name         | Owner     | Group     | Perm | Type | Mountpoint  |
+| ------------ | --------- | --------- | ---- | ---- | ----------- |
+| yubal-data   | `${puid}` | `${pgid}` | -    |  -   | /app/data   |
+| yubal-config | `${puid}` | `${pgid}` | -    |  -   | /app/config |
 
 ## OCI Configuration
 
