@@ -1,0 +1,18 @@
+ARG yubal_from=ghcr.io/appjail-makejails/yubal
+ARG yubal_tag=latest
+
+OPTION start
+OPTION overwrite=force
+OPTION from=${yubal_from}:${yubal_tag}
+
+INCLUDE gh+AppJail-makejails/user-mapping
+
+CMD --local appjail oci set-user "${APPJAIL_JAILNAME}" noroot
+CMD --local appjail oci set-boot on "${APPJAIL_JAILNAME}"
+CMD find /app -user nobody -exec chown -h noroot {} +
+CMD find /app -group nobody -exec chown -h :noroot {} +
+
+# The first run won't start the OCI process because we used the 'start'
+# option, so a second run is required for this to happen. For Director
+# users, this goes virtually unnoticed.
+STOP

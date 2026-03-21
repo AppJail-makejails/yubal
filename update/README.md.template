@@ -63,20 +63,11 @@ volumes:
 
 ### Arguments
 
-* `yubal_from` (default: `ghcr.io/appjail-makejails/puck`): Location of OCI image. See also [OCI Configuration](#oci-configuration).
+* `yubal_from` (default: `ghcr.io/appjail-makejails/%%IMAGE_NAME%%`): Location of OCI image. See also [OCI Configuration](#oci-configuration).
 * `yubal_tag` (default: `latest`): OCI image tag. See also [OCI Configuration](#oci-configuration).
 
 ## OCI Configuration
 
 ```yaml
-build:
-  variants:
-    - tag: 15.0
-      containerfile: Containerfile.pkg
-      aliases: ["latest"]
-      default: true
-      args:
-        FREEBSD_RELEASE: "15.0"
-        PYTHON_VERSION: "312"
-        YUBAL_VERSION: "0.7.1"
+%%OCI_CONFIGURATION%%
 ```
