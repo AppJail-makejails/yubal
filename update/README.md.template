@@ -42,7 +42,7 @@ services:
     makejail: gh+AppJail-makejails/yubal
     arguments:
       - puid: 1000
-      - guid: 1000
+      - pgid: 1000
     oci:
       environment:
         - YUBAL_PORT: 8000
