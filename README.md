@@ -85,7 +85,7 @@ build:
       args:
         FREEBSD_RELEASE: "15.0"
         PYTHON_VERSION: "312"
-        YUBAL_VERSION: "0.7.1"
+        YUBAL_VERSION: "0.7.2"
 ```
 
 ## Notes
