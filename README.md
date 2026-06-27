@@ -6,7 +6,7 @@ Playlist sync. Artist/year sorting. Duplicate detection. Media server ready.
 
 github.com/guillevc/yubal
 
-<img src="https://github.com/guillevc/yubal/blob/master/web/public/favicon.svg?raw=true" width="30%" height="auto" alt="yubal">
+<img src="https://github.com/guillevc/yubal/blob/master/web/public/favicon.svg?raw=true" width="30%" height="auto" alt="yubal logo">
 
 ## How to use this Makejail
 
@@ -61,31 +61,25 @@ volumes:
     device: /var/appjail-volumes/yubal/config
 ```
 
-### Arguments
-
-* `yubal_from` (default: `ghcr.io/appjail-makejails/yubal`): Location of OCI image. See also [OCI Configuration](#oci-configuration).
-* `yubal_tag` (default: `latest`): OCI image tag. See also [OCI Configuration](#oci-configuration).
-
 ### Volumes
 
-| Name         | Owner     | Group     | Perm | Type | Mountpoint  |
-| ------------ | --------- | --------- | ---- | ---- | ----------- |
-| yubal-data   | `${puid}` | `${pgid}` | -    |  -   | /app/data   |
-| yubal-config | `${puid}` | `${pgid}` | -    |  -   | /app/config |
+| Name | Owner | Group | Perm | Type | Mountpoint |
+| --- | --- | --- | --- | --- | --- |
+| yubal-config | `${puid}` | `${pgid}` | - | - | /var/db/yubal/config |
+| yubal-data | `${puid}` | `${pgid}` | - | - | /var/db/yubal/data |
 
 ## OCI Configuration
 
 ```yaml
 build:
   variants:
-    - tag: 15.0
-      containerfile: Containerfile.pkg
+    - tag: 15.1
+      containerfile: Containerfile
       aliases: ["latest"]
       default: true
       args:
-        FREEBSD_RELEASE: "15.0"
-        PYTHON_VERSION: "312"
-        YUBAL_VERSION: "0.8.0"
+        FREEBSD_RELEASE: "15.1"
+        PYVER: "312"
 ```
 
 ## Notes

@@ -1,10 +1,9 @@
 build:
   variants:
-    - tag: 15.0
-      containerfile: Containerfile.pkg
+    - tag: 15.1
+      containerfile: Containerfile
       aliases: ["latest"]
       default: true
       args:
-        FREEBSD_RELEASE: "15.0"
-        PYTHON_VERSION: "312"
-        YUBAL_VERSION: "0.8.0"
+        FREEBSD_RELEASE: "15.1"
+        PYVER: "312"
