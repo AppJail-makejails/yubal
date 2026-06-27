@@ -61,6 +61,11 @@ volumes:
     device: /var/appjail-volumes/yubal/config
 ```
 
+### Arguments (stage: build)
+
+* `yubal_from` (default: `ghcr.io/appjail-makejails/yubal`): Location of OCI image. See also [OCI Configuration](#oci-configuration).
+* `yubal_tag` (default: `latest`): OCI image tag. See also [OCI Configuration](#oci-configuration).
+
 ### Volumes
 
 | Name | Owner | Group | Perm | Type | Mountpoint |
