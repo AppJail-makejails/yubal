@@ -1,5 +1,6 @@
 ARG yubal_from=ghcr.io/appjail-makejails/yubal
 ARG yubal_tag=latest
 
+OPTION container=boot
 OPTION overwrite=force
 OPTION from=${yubal_from}:${yubal_tag}
