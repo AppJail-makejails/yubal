@@ -20,7 +20,7 @@ if [ ! -d "${YUBAL_CONFIG}" ]; then
     mkdir -p "${YUBAL_CONFIG}"
 fi
 
-chown -R noroot:noroot \
+change_owner \
     "${YUBAL_DATA}" "${YUBAL_CONFIG}"
 
 exec su-exec noroot "${python_cmd}" -m yubal_api
